@@ -48,7 +48,7 @@ telnet ip port
 df -hT
 ```
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20191213164855422.png" alt="image-20191213164855422" style="zoom: 50%;" />
+<img src="image-20191213164855422.png" alt="image-20191213164855422" style="zoom:50%;" />
 
 ```shell
 mount -t drvfs F: /mnt/f
