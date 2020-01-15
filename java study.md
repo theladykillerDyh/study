@@ -79,3 +79,34 @@ toString方法：
 
 注意：hashCode相等，equals方法不一定相等；equals方法相等，hashCode方法一定相等。尽量保持<u>hashCode相等，equals就相等</u>，有利于提高hash对象的存储读取效率。
 
+### 方法调用
+
+classA A = new classB(); classA是classB的超类，当调用A.methodM()的时候，如果classB有methodM，那么使用B的方法，如果没有，那么使用classA的方法。
+
+子类重写父类的方法，子类的方法的可见性比父类方法的可见性高。
+
+### 自动装箱拆箱
+
+自动装箱和自动拆箱是在<u>编译</u>阶段实现的。
+
+#### 自动装箱
+
+自动装箱指的是将<u>基本类型</u>的值赋值给<u>包装类型</u>
+
+```java
+Integer i = 1;
+#在编译的时候自动装箱
+Integer i = Integer.valueOf(1)
+```
+
+#### 自动拆箱
+
+自动拆箱也是在编译的时候将<u>包装类型</u>的值赋值给<u>基本类型</u>
+
+```
+int i = 1;
+#在编译的时候自动装箱
+int i = Integer.valueOf(1)
+```
+
+https://www.cnblogs.com/wgblog-code/p/11362544.html
