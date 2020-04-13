@@ -103,7 +103,7 @@ Integer i = Integer.valueOf(1)
 
 自动拆箱也是在编译的时候将<u>包装类型</u>的值赋值给<u>基本类型</u>
 
-```
+```java
 int i = 1;
 #在编译的时候自动装箱
 int i = Integer.valueOf(1)
