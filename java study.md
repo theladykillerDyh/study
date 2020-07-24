@@ -1,6 +1,6 @@
 # java study
 
-## 数据
+## 数据类型
 
 ### 基本数据类型
 
@@ -42,6 +42,45 @@ sout(bigdecimal1.compareTo(bigdecimal2)==0);//显示false，因为二进制不�
 ​	常用工具类：Apatch和Spring的BeanUtils
 
 ​	推荐使用**Spring的BeanUtils**。Apatch不仅只能浅拷贝，而且加了很多的校验，性能不行；Spring的工具类可以自动忽视名称不相等的成员变量，但是成员变量的类型必须相等。
+
+### 泛型
+
+​	泛型，即“参数化类型”。泛型的参数类型只能是类类型，不能是简单类型。
+
+#### 1、泛型实例（泛型类）
+
+```java
+//此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型
+//在实例化泛型类时，必须指定T的具体类型
+public class Generic<T>{ 
+    //key这个成员变量的类型为T,T的类型由外部指定  
+    private T key;
+    public Generic(T key) { //泛型构造方法形参key的类型也为T，T的类型由外部指定
+        this.key = key;
+    }
+    public T getKey(){ //泛型方法getKey的返回值类型为T，T的类型由外部指定
+        return key;
+    }
+}
+```
+
+
+
+	#### 2、泛型只在编译阶段有效
+
+```java
+List<String> stringArrayList = new ArrayList<String>();
+List<Integer> integerArrayList = new ArrayList<Integer>();
+
+Class classStringArrayList = stringArrayList.getClass();
+Class classIntegerArrayList = integerArrayList.getClass();
+
+sout(classStringArrayList.equals(classIntegerArrayList));//输出true
+```
+
+运行时不存在泛型（泛型检查），只有在编译时有效，编译的时候就会转换成具体的类型
+
+
 
 ## 类
 
