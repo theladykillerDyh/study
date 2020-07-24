@@ -31,7 +31,17 @@ sout(bigdecimal1.compareTo(bigdecimal2)==0);//显示false，因为二进制不�
 
 ### 符号数
 
-java保存的都是有符号数。
+​	java保存的都是有符号数。
+
+### 克隆（clone）
+
+​	浅拷贝：对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝，此为浅拷贝。
+
+​	深拷贝：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，此为深拷贝。
+
+​	常用工具类：Apatch和Spring的BeanUtils
+
+​	推荐使用**Spring的BeanUtils**。Apatch不仅只能浅拷贝，而且加了很多的校验，性能不行；Spring的工具类可以自动忽视名称不相等的成员变量，但是成员变量的类型必须相等。
 
 ## 类
 
@@ -150,3 +160,13 @@ int i = Integer.valueOf(1)
 ```
 
 https://www.cnblogs.com/wgblog-code/p/11362544.html
+
+### 静态代码块
+
+```java
+static{
+
+}
+```
+
+随着类的编写
