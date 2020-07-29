@@ -42,3 +42,14 @@ DCL的操作对象(用户):此时的用户指的是数据库用户。
 1.DML操作是可以手动控制事务的开启、提交和回滚的。
 
 2.DDL操作是隐性提交的，不能rollback！
+
+## select
+
+#### 多字段in查询
+
+多个字段用括号括起来
+
+```sql
+select * from tableA where (columA,columB) in ((valueA1,balueB1),(valueA2,balueB2))
+```
+

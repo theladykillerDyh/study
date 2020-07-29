@@ -90,7 +90,7 @@ sout(classStringArrayList.equals(classIntegerArrayList));//输出true
 
 ### final修饰符
 
-​	final修饰变量的时候，必须初始化，且只能初始化一次。如果给final变量多次赋值，除第一次赋值外，后续的赋值都会编译报错。
+​	final修饰变量的时候，必须初始化，且只能初始化一次。如果给final变量多次赋值，除第一次赋值外，后续的赋值都会**编译报错**。
 
 ​	final修饰类的时候，类不能够被继承。final修饰方法的时候，方法不能被重写。
 
